@@ -2,6 +2,7 @@
 ######################
 Pre-Requsites
 ######################
+Install web server tool like Apache, I used MAMP.
 import cgitb
 import cgi
 import mysql.connector
