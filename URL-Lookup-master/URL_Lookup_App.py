@@ -7,17 +7,10 @@ import cgi
 from URL_Lookup_Service.URL_Lookup_Service import URL_Lookup_Service
 import json
 
-"""
-CGI flag for debugging purpose
-True = execute python through html
-False = execute python directly
-"""
 CGI = True
 MalwareURL = True
 
-"""
-CGI stuff to connect from HTML
-"""
+
 cgitb.enable()
 print "Content-Type: text/plain;charset=utf-8"
 print
