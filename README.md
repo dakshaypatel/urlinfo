@@ -30,17 +30,17 @@ CREATE TABLE url_infos(
 - pip
 
 ### Instructions:-
-1. Clone the project- `git clone https://github.com/princemanohar/URLLookupService.git`
-2. Go into the project folder- `cd  URLLookupService`
-3. Install Dependent python modules - `pip install - requirements.txt`
-4. Run the app- `python run.py`
+1. Clone the project- 'https://github.com/dakshaypatel/urlinfo.git'
+2. Go into the project folder- 'cd  urlinfo'
+3. Install Dependent python modules - 'pip3 install - requirements.txt'
+4. Run the app- 'python3 run.py'
 
 ## API Documentation:- 
 You can also refer to the [Postman Collection here](https://www.getpostman.com/collections/7029f8e8d0cc426201ef).
 
 1. **Get Url Info:** 
 
-*GET* :  `/urlinfo/1/<hostname_and_port>/<original_path_and_query_string>`
+*GET* :  '/urlinfo/1/<hostname_and_port>/<original_path_and_query_string>'
 
 **Response**: 
 ```
@@ -51,7 +51,7 @@ MALWARE/NOT_MALWARE
 
 2. **Update Url Details** 
 
-*POST* : `/urlinfo`
+*POST* : '/urlinfo'
 
 **Header**:
 ```
