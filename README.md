@@ -46,6 +46,8 @@ You can also refer to the [Postman Collection here](https://www.getpostman.com/c
 ```
 MALWARE/NOT_MALWARE
 ```
+<img width="1790" alt="GET Request" src="https://user-images.githubusercontent.com/32039107/183448602-a10954fa-bad7-49bd-ad56-ebc1970b2b23.png">
+
 
 2. **Update Url Details** 
 
@@ -66,9 +68,5 @@ MALWARE/NOT_MALWARE
 SUCCESS
 ```
 
-# Extra Considerations:
-1. **The number of requests may exceed the capacity of this system:** In that case, this flask app can be installed on multiple servers and they can be placed behind a **Load Balancer**. The load balancer will distribute the requests evenly to these flask apps, thereby balancing the traffic. That is how this application can be scaled to increasing traffic. Say, each system with the flask app running on it can handle 50 requests/second. And the traffic we are supporting is 500 requests/second, in that case, we can go ahead with 11 servers with this service running on them, hence we now support `11*50=550` requests per second (adding some redundancy).
-
-2. **Strategies to update the service with new URLs:** I have added an update api ([see this](https://github.com/princemanohar/URLLookupService#api-documentation)), using which the entries in the database can be added/updated. The `url` field in the table `url_infos` has been made a primary key, in order to avoid duplicate urls. So, when the the update url info api is called with a url which already exists, it's value is updated, instead of repeating the value. As far as scale is concerned, to support 5000 requests per day, with requests evenly distributed throughout the day, i.e. 3 updates/second, it will be a pretty nominal load on our app and the database, which can handle this update traffic easily. However, in case these updates are not evenly distributed, meaning that, the updates come only over a certain hour of that day, then, it can be a problem, as we may not want our database to have a high load due to sudden increase in updates which may affect the read-times.
-In that case, we will have to push the update requests into a queue and then write a consumer which subscribes to that queue and writes the entries to the database at a constant speed. This approach will keep an even update traffic at our DB, and will update all url entries eventually (with some delay). 
+![POST Request](https://user-images.githubusercontent.com/32039107/183448705-98b06db7-c7be-48a4-b8ed-0d423b3ec0dd.png)
 
