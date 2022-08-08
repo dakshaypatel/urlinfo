@@ -38,9 +38,10 @@ CREATE TABLE url_infos(
 
 ### Instructions:-
 1. Clone the project- 'https://github.com/dakshaypatel/urlinfo.git'
-2. Go into the project folder- 'cd  urlinfo'
-3. Install Dependent python modules - 'pip3 install click Flask itsdangerous Jinja2 MarkupSafe mysqlclient Werkzeug'
-4. Run the app- 'python3 run.py'
+2. Install mysql on local. Please follow the step based on your OS - 'https://dev.mysql.com/doc/mysql-shell/8.0/en/mysql-shell-install.html'
+3. Go into the project folder- 'cd  urlinfo'
+4. Install Dependent python modules - 'pip3 install click Flask itsdangerous Jinja2 MarkupSafe mysqlclient Werkzeug'
+5. Run the app- 'python3 run.py'
 
 ## API Documentation:- 
 You can also refer to the [Postman Collection here](https://www.getpostman.com/collections/7029f8e8d0cc426201ef).
