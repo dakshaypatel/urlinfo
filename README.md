@@ -27,12 +27,19 @@ CREATE TABLE url_infos(
 ## Instructions to build and run:- 
 ### Requirements:-
 - Python 3+
-- pip
+- pip3
+- click
+- Flask
+- itsdangerous 
+- Jinja2 
+- MarkupSafe 
+- mysqlclient 
+- Werkzeug
 
 ### Instructions:-
 1. Clone the project- 'https://github.com/dakshaypatel/urlinfo.git'
 2. Go into the project folder- 'cd  urlinfo'
-3. Install Dependent python modules - 'pip3 install - requirements.txt'
+3. Install Dependent python modules - 'pip3 install click Flask itsdangerous Jinja2 MarkupSafe mysqlclient Werkzeug'
 4. Run the app- 'python3 run.py'
 
 ## API Documentation:- 
