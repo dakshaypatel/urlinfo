@@ -29,8 +29,6 @@ def update_url_info(url, malware_info):
     cursor.close()
     return res
 
-
-
 def insert_url_info(url, malware_info):
     if malware_info not in valid_malware_infos:
         raise Exception("Invalid value of malware_info found : "+malware_info+". Allowed Values  :"+valid_malware_infos)
@@ -49,26 +47,3 @@ def insert_url_info(url, malware_info):
     except:
         pass
     return "SUCCESS"
-
-
-if __name__=="__main__":
-    # Testing the code
-    info = get_url_info("http://google.com")
-    print (info)
-
-    update_url_info(url='somefakesite.com', malware_info='NOT_MALWARE')
-
-    resp = insert_url_info("somefakesite.com", "MALWARE")
-    print(resp)
-
-
-
-
-
-
-
-
-
-
-
-
